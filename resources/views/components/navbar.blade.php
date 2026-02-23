@@ -20,6 +20,7 @@
         </button>
 
         <div x-show="open"
+            x-cloak
             @click.away="open = false"
             x-transition
             class="absolute right-0 mt-2 w-44 bg-white border rounded-lg shadow-lg py-2">

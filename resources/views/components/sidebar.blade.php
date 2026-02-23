@@ -11,11 +11,33 @@
     <!-- Menu -->
     <nav class="flex-1 p-4 space-y-2">
 
-        <a href="#"
-            class="block px-4 py-2 rounded-lg bg-gray-900 text-white font-medium">
-            Dashboard
-        </a>
+        <nav class="flex-1 p-4 space-y-2">
 
+            <a href="{{ route('dashboard') }}"
+                class="block px-4 py-2 rounded-lg font-medium
+       {{ request()->routeIs('dashboard') 
+            ? 'bg-gray-900 text-white' 
+            : 'text-gray-700 hover:bg-gray-100' }}">
+                Dashboard
+            </a>
+
+            <a href="{{ route('forms.index') }}"
+                class="block px-4 py-2 rounded-lg font-medium
+       {{ request()->routeIs('forms.*') 
+            ? 'bg-gray-900 text-white' 
+            : 'text-gray-700 hover:bg-gray-100' }}">
+                Forms
+            </a>
+
+            <a href="{{ route('settings') }}"
+                class="block px-4 py-2 rounded-lg font-medium
+       {{ request()->routeIs('settings') 
+            ? 'bg-gray-900 text-white' 
+            : 'text-gray-700 hover:bg-gray-100' }}">
+                Settings
+            </a>
+
+            {{--
         <!-- Menu 1 -->
         <div x-data="{ open: false }" class="space-y-1">
             <button @click="open = !open"
@@ -63,7 +85,9 @@
                 </a>
             </div>
         </div>
+        --}}
 
-    </nav>
+
+        </nav>
 
 </aside>
