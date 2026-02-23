@@ -4,7 +4,7 @@
     <!-- App Name -->
     <div class="h-16 flex items-center px-6 border-b">
         <a href="{{ route('home') }}" class="text-xl font-bold text-gray-800">
-            AppName
+            LaravelDynamicForms
         </a>
     </div>
 
